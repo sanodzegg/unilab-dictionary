@@ -10,3 +10,136 @@
 a{
     color: inherit;
 }
+/* variables */
+:root {
+    --main-bg-color: #F5F5F5;
+    --secondary-color: #E8E8E8;
+    --nav-color: #707070;
+  }
+
+body{
+    background-color: var(--main-bg-color);
+}
+.container{
+    max-width: 1088px;
+    width: 100%;
+    margin: 0 auto;
+}
+.bold{
+    font-weight: bold;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+.nav-ul{
+    display: flex;
+    align-items: center;
+}
+.nav-link{
+    color: var(--nav-color);
+}
+.nav-link:last-child{
+    margin-left: 92px;
+}
+.site-logo a{
+    font-size: 20px;
+    color: var(--nav-color);
+
+}
+.main-input-wrapper{
+    max-width: 1014px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 37px;
+   
+}
+.main-input{
+    width: 100%;
+    height: 60px;
+    border: 0;
+    padding: 20px;
+}
+.main-input:focus{
+    outline: 0;
+}
+.term-of-week{
+    color: var(--nav-color);
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+.term-of-week h2{
+}
+.term-title{
+    margin: 12px 0;
+}
+.hashtag-keywords{
+    margin: 12px 0;
+    font-size: 14px;
+    line-height: 17px;
+}
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.button-wrapper button{
+    width: 140px;
+    height: 40px;
+    border: 0;
+}
+.see-details{
+    color: white;
+    background-color: var(--nav-color);
+    padding: 11px 15px 10px 16px;
+}
+.term-cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.term-card{
+    color: var(--nav-color);
+    width: 346px;
+    height: fit-content;
+    background-color: var(--secondary-color);
+    margin: 20px 0;
+    padding: 14px 20px;
+}
+.card-header{
+    width: 194px;
+    margin-bottom: 12px;
+}
+.card-body{
+    width: 297px;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.about-project{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--nav-color);
+}
+.about-title{
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+.about-info{
+    max-width: 986px;
+    width: 100%;
+}
+.footer{
+    background-color: var(--secondary-color);
+    color: var(--nav-color);
+    height: 160px;
+    margin-top: 40px;
+    padding: 20px 140px;
+}
+.footer-info{
+    margin-top: 20px;
+}

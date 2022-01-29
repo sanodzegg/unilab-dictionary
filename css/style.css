@@ -54,7 +54,6 @@ body{
     width: 100%;
     margin: 0 auto;
     padding: 30px 37px;
-   
 }
 .main-input{
     width: 100%;
@@ -140,6 +139,61 @@ body{
     margin-top: 40px;
     padding: 20px 140px;
 }
+
 .footer-info{
     margin-top: 20px;
+}
+
+.container .about-block {
+    color: var(--nav-color);
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.container .about-block h2 {
+    padding-bottom: 1rem;
+}
+
+.container .about-block p {
+    padding: 10px 0;
+    font-size: 16px;
+    max-width: 950px;
+    line-height: 19px;
+}
+
+.meet-team-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 15.1%;
+}
+
+.team-member-card {
+    position: relative;
+    width: 272px;
+    max-width: 100%;
+    background: url(../media/png/default-user-image.png) center no-repeat;
+    background-size: cover;
+    margin: 20px 0;
+    padding: 14px 20px 0px 20px;
+}
+
+.team-member-card .team-info {
+    padding-top: 78.64%;
+}
+
+.team-member-card .team-info p {
+    text-align: center;
+    color: transparent;
+    padding-bottom: 10px;
+}
+
+.team-member-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/png/default-user-image.png) center no-repeat;
+    background-size: cover;
+}
+
+.team-member-card:hover .team-info p {
+    color: #fff;
 }

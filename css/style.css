@@ -197,3 +197,41 @@ body{
 .team-member-card:hover .team-info p {
     color: #fff;
 }
+
+.error-wrapper {
+    width: 1088px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DADBDA;
+    padding: 120px 0 248px 0;
+}
+
+.error-wrapper h1 {
+    color: #717170;
+    padding-bottom: 46px;
+}
+
+.error-wrapper button {
+    width: 195px;
+    height: 40px;
+    background-color: #707070;
+    color: #F5F5F5;
+    padding: 9px 21px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.errorpage-footer {
+    margin-top: 211px;
+    background-color: var(--secondary-color);
+    color: var(--nav-color);
+    height: 160px;
+    padding: 20px 140px;
+}

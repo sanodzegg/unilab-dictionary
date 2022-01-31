@@ -104,7 +104,7 @@ body{
 .term-card{
     color: var(--nav-color);
     width: 346px;
-    height: fit-content;
+    height: 195px;
     background-color: var(--secondary-color);
     margin: 20px 0;
     padding: 14px 20px;
@@ -115,6 +115,21 @@ body{
 }
 .card-body{
     width: 297px;
+    height: 47px;
+}
+.week-term-description{
+    max-height: 20px;
+    width: 884px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.term-description{
+    max-height: 47px;
+    width: 297px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card-footer{
     display: flex;

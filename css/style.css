@@ -10,6 +10,9 @@
 a{
     color: inherit;
 }
+button{
+    cursor: pointer;
+}
 /* variables */
 :root {
     --main-bg-color: #F5F5F5;

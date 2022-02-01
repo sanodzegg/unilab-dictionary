@@ -8,12 +8,222 @@
     <title>ლექსიკონი</title>
 </head>
 <body>
-    <main>
-        dictionary page
+    <header class="header container">
+        <div class="site-logo">
+            <a href="index.html">ლოგო</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a class="nav-link" href="about.html">პროექტის შესახებ</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="dictionary.html">ლექსიკონი</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="alphabet-wrapper">
+        </div>
+        <article class="search-block">
+            <div class="searchbar">
+                <form action="">
+                    <input type="text" placeholder="ძიება" name="search">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg>
+                    <select name="filter" id="filter">
+                        <option value="default" selected disabled hidden>ფილტრი</option>
+                        <option value="ICT">ICT პროექტების მართვა</option>
+                        <option value="wordpress">WordPress</option>
+                        <option value="frontend">Front End</option>
+                        <option value="graphicdesign">გრაფიკული დიზაინი</option>
+                        <option value="python">Python</option>
+                        <option value="narrativedesign">ნარატივ დიზაინი</option>
+                        <option value="digitalcommunications">ციფრული კომუნიკაციები</option>
+                    </select>
+                    <select name="sort" id="sort">
+                        <option value="default" selected disabled hidden>სორტირება</option>
+                        <option value="ICT">ანბანის ზრდადობის მიხედვით</option>
+                        <option value="wordpress">ანბაბის კლებადობის მიხედვით</option>
+                        <option value="frontend">პოპულარობის მიხედვით</option>
+                        <option value="graphicdesign">ახალი დამატებული</option>
+                        <option value="python">ძველი დამატებული</option>
+                    </select>
+                </form>
+            </div>
+        </article>
+        <div class="flex-wrap-main">
+            <div class="term-cards-wrapper">
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project management</span> - პროექტის მენეჯმენტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project manager</span> - პროექტის მენეჯერი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin"> PM, ერთ-ერთი მთავარი მონაწილე პროექტში. მისი როლი არის...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">ICT Project</span> - ICT პროექტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="term-cards-wrapper">
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project management</span> - პროექტის მენეჯმენტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project manager</span> - პროექტის მენეჯერი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin"> PM, ერთ-ერთი მთავარი მონაწილე პროექტში. მისი როლი არის...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">ICT Project</span> - ICT პროექტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="term-cards-wrapper">
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project management</span> - პროექტის მენეჯმენტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">Project manager</span> - პროექტის მენეჯერი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin"> PM, ერთ-ერთი მთავარი მონაწილე პროექტში. მისი როლი არის...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="term-card-main">
+                    <div class="card-header">
+                        <h3><span class="bold">ICT Project</span> - ICT პროექტი</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-descriptioin">ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            <span>#გრაფიკულიდიზაინი</span>
+                            <span>#პროექტისმენეჯმენტი</span>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="see-details">ნახე სრულად</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-
-
+    <footer class="footer">
+        <div class="container">
+            <div class="email-info">
+                <span>unilab@iliauni.edu.ge</span>
+            </div>
+            <p class="footer-info">ვებგვერდი შეიქმნა ლექსიკოგრაფების დახმარებით</p>
+        
+        </div>
+    </footer>
 
 
 

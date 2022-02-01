@@ -10,6 +10,9 @@
 a{
     color: inherit;
 }
+button{
+    cursor: pointer;
+}
 /* variables */
 :root {
     --main-bg-color: #F5F5F5;
@@ -44,6 +47,10 @@ body{
 .nav-link:last-child{
     margin-left: 92px;
 }
+.active {
+    border-bottom: 3px #717170 solid;
+    padding-bottom: 5px;
+}
 .site-logo a{
     font-size: 20px;
     color: var(--nav-color);
@@ -54,7 +61,6 @@ body{
     width: 100%;
     margin: 0 auto;
     padding: 30px 37px;
-   
 }
 .main-input{
     width: 100%;
@@ -99,14 +105,31 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
 }
 .term-card{
     color: var(--nav-color);
     width: 346px;
-    height: fit-content;
+    height: 195px;
     background-color: var(--secondary-color);
     margin: 20px 0;
+    padding: 14px 20px;
+}
+
+.flex-wrap-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.term-card-main {
+    color: var(--nav-color);
+    width: 346px;
+    height: fit-content;
+    background-color: var(--secondary-color);
+    margin: 10px 0;
     padding: 14px 20px;
 }
 .card-header{
@@ -115,6 +138,21 @@ body{
 }
 .card-body{
     width: 297px;
+    height: 47px;
+}
+.week-term-description{
+    max-height: 20px;
+    width: 884px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.term-description{
+    max-height: 47px;
+    width: 297px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card-footer{
     display: flex;
@@ -140,6 +178,181 @@ body{
     margin-top: 40px;
     padding: 20px 140px;
 }
+
 .footer-info{
     margin-top: 20px;
+}
+
+.container .about-block {
+    color: var(--nav-color);
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.container .about-block h2 {
+    padding-bottom: 1rem;
+}
+
+.container .about-block p {
+    padding: 10px 0;
+    font-size: 16px;
+    max-width: 950px;
+    line-height: 19px;
+}
+
+.container .search-block {
+    color: var(--nav-color);
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.container .search-block .searchbar {
+    height: 60px;
+}
+
+.container .search-block .searchbar form {
+    height: 100%;
+    position: relative;
+}
+
+.container .search-block .searchbar form svg {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    fill: #707070;
+}
+
+.alphabet-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.alphabet-wrapper span {
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+    padding: 0 5px;
+}
+
+.alphabet-wrapper .lchange {
+    cursor: pointer;
+    margin-left: 60px;
+    background-color: #717170;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 5px;
+}
+
+.container .search-block .searchbar form select {
+    font-size: 16px;
+    line-height: 19px;
+    height: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 0%;
+    border: 1px #707070 solid;
+    color: #707070;
+}
+
+#filter {
+    width: 250px;
+    position: absolute;
+    left: 73%;
+    top: 50%;
+    transform: translate(-73%, -50%);
+}
+
+#sort {
+    width: 144px;
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-95%, -50%);
+}
+
+.container .search-block input[type=text] {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 29.5rem 0 3.2rem;
+    font-size: 14px;
+}
+
+.meet-team-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 15.1%;
+}
+
+.team-member-card {
+    position: relative;
+    width: 272px;
+    max-width: 100%;
+    background: url(../media/png/default-user-image.png) center no-repeat;
+    background-size: cover;
+    margin: 20px 0;
+    padding: 14px 20px 0px 20px;
+}
+
+.team-member-card .team-info {
+    padding-top: 78.64%;
+}
+
+.team-member-card .team-info p {
+    text-align: center;
+    color: transparent;
+    padding-bottom: 10px;
+}
+
+.team-member-card:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/png/default-user-image.png) center no-repeat;
+    background-size: cover;
+}
+
+.team-member-card:hover .team-info p {
+    color: #fff;
+}
+
+.error-wrapper {
+    width: 1088px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DADBDA;
+    padding: 120px 0 248px 0;
+}
+
+.error-wrapper h1 {
+    color: #717170;
+    padding-bottom: 46px;
+}
+
+.error-wrapper button {
+    width: 195px;
+    height: 40px;
+    background-color: #707070;
+    color: #F5F5F5;
+    padding: 9px 21px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.errorpage-footer {
+    margin-top: 211px;
+    background-color: var(--secondary-color);
+    color: var(--nav-color);
+    height: 160px;
+    padding: 20px 140px;
 }

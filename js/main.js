@@ -1,5 +1,6 @@
-let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
-alphabet.forEach((letter)=> {
+if(document.location.pathname == '/dictionary.html'){
+    let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
+    alphabet.forEach((letter)=> {
     let child = document.createElement('span');
     child.innerText = letter;
     document.querySelector('.alphabet-wrapper').appendChild(child)
@@ -16,7 +17,6 @@ window.onload = function() {
         document.querySelector('.page-el').classList.add('page-active')
     }
 }
-
 // 
 let cardHeader = 'testhead';
 let cardBody = 'testdesc';
@@ -1312,4 +1312,5 @@ function generatePages() {
             paginationClicked = 1;
         }
     })
+  }
 }

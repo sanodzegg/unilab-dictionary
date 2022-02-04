@@ -215,6 +215,7 @@ body{
     line-height: 24px;
     color: #707070;
     padding: 0 5px;
+    cursor: pointer;
 }
 
 .alphabet-wrapper .lchange {

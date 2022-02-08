@@ -11,26 +11,31 @@
 </head>
 
 <body>
-    <header class="header container">
-            <div class="site-logo">
-                <a href="index.html">ლოგო</a>
+    <header class="header">
+        <div class="container">
+            <div class="flex-between">
+                <div class="site-logo">
+                    <a href="index.html">ლოგო</a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-ul">
+                        <li class="nav-li">
+                            <a class="nav-link" href="about.html">პროექტის შესახებ</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="dictionary.html">ლექსიკონი</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="nav">
-                <ul class="nav-ul">
-                    <li class="nav-li">
-                        <a class="nav-link" href="about.html">პროექტის შესახებ</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="dictionary.html">ლექსიკონი</a>
-                    </li>
-                </ul>
-            </nav>
+        </div>
     </header>
     <main class="container">
         <article class="term-of-week">
             <h2>"კვირის ტერმინი"</h2>
             <p class="term-title"><strong>Project</strong> - <span>პროექტი</span></p>
-            <p class="week-term-description">პროექტი არის დროებითი საქმიანობა უნიკალური პროდუქტის, მომსახურების ან შედეგის შექმნის მიზნით</p>
+            <p class="week-term-description">პროექტი არის დროებითი საქმიანობა უნიკალური პროდუქტის, მომსახურების ან
+                შედეგის შექმნის მიზნით</p>
             <div class="hashtag-keywords">
                 <span>#გრაფიკულიდიზაინი</span>
                 <span>#პროექტისმენეჯმენტი</span>
@@ -40,7 +45,10 @@
             </div>
         </article>
         <div class="main-input-wrapper">
-            <input class="main-input" type="text" placeholder="ძიება">
+            <form class="input-form" action="">
+                <input class="main-input" type="text" placeholder="ძიება">
+            </form>
+            <!-- <svg class="search-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg> -->
         </div>
         <div class="term-cards-wrapper">
             <div class="term-card">
@@ -82,7 +90,8 @@
                     <h3><span class="bold">ICT Project</span> - ICT პროექტი</h3>
                 </div>
                 <div class="card-body">
-                    <p class="term-description">ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული და საკომუნიკაციო</p>
+                    <p class="term-description">ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული
+                        და საკომუნიკაციო</p>
                 </div>
                 <div class="card-footer">
                     <div class="hashtag-keywords">
@@ -97,18 +106,24 @@
         </div>
         <div class="about-project">
             <h3 class="about-title">პროექტის შესახებ</h3>
-            <p class="about-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere nemo, corporis incidunt recusandae quaerat libero saepe qui. Magnam exercitationem neque tenetur molestias dolores similique rem, culpa cumque omnis ut aperiam ipsa asperiores? Eligendi illum corporis molestias suscipit, aliquam aperiam omnis, ratione hic, nam laboriosam sunt fuga vel reprehenderit voluptas impedit.</p>
+            <p class="about-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere nemo, corporis
+                incidunt recusandae quaerat libero saepe qui. Magnam exercitationem neque tenetur molestias dolores
+                similique rem, culpa cumque omnis ut aperiam ipsa asperiores? Eligendi illum corporis molestias
+                suscipit, aliquam aperiam omnis, ratione hic, nam laboriosam sunt fuga vel reprehenderit voluptas
+                impedit.</p>
         </div>
     </main>
-<footer class="footer">
-    <div class="container">
-        <div class="email-info">
-            <span>unilab@iliauni.edu.ge</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="center-element">
+                <div class="email-info">
+                    <span>unilab@iliauni.edu.ge</span>
+                </div>
+                <p class="footer-info">ვებგვერდი შეიქმნა ლექსიკოგრაფების დახმარებით</p>
+
+            </div>
         </div>
-        <p class="footer-info">ვებგვერდი შეიქმნა ლექსიკოგრაფების დახმარებით</p>
-    
-    </div>
-</footer>
+    </footer>
 
 
 

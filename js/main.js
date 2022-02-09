@@ -1,10 +1,25 @@
-if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
+if(document.location.pathname == '/dictionary.html'){
     let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
     alphabet.forEach((letter)=> {
     let child = document.createElement('span');
+    child.setAttribute('class', 'al-letter');
     child.innerText = letter;
     document.querySelector('.alphabet-wrapper').appendChild(child)
 })
+let alpbox = document.querySelectorAll('.al-letter');
+for(let i = 0; i < alpbox.length; i++) {
+    alpbox[i].addEventListener('click', function(){
+        for(let e = 0; e < alpbox.length; e++) {
+            alpbox[e].classList.remove('al-active')
+        }
+        for(let a = 0; a < alpbox.length; a++) {
+            if(a == i) {
+                alpbox[a].classList.add('al-active')
+                break;
+            }
+        }
+    })
+}
 let lchange = document.createElement('span');
 lchange.className = 'lchange';
 lchange.innerText = 'ENG'
@@ -224,15 +239,15 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'First'}</span></h3>
+                        <h3><span class="bold">${'Project management - პროექტის მენეჯმენტი'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-descriptioin">${`ადამიანური, მატერიალური და დროითი რეს...`}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
+                            <span>#${`#გრაფიკულიდიზაინი`}</span>
+                            <span>#${`#გრაფიკულიდიზაინი`}</span>
                         </div>
                         <div class="button-wrapper">
                             <a href="#" class="see-details">ნახე სრულად</a>
@@ -1196,7 +1211,7 @@ function generateTerms(val) {
         parent.appendChild(wrapper);
         for(let a = 0; a < Object.keys(terms[val]).length; a++) {
             let main = document.createElement('div');
-            main.setAttribute('class', 'term-card-main');
+            main.setAttribute('class', 'term-card');
             wrapper.appendChild(main);
             main.innerHTML = terms[val][i].main[i].content;
         }

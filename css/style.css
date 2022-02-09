@@ -15,11 +15,18 @@ a{
     --main-bg-color: #EAEAEA;
     --secondary-color: #E8E8E8;
     --card-bg: #1BA8A9;
-    --nav-color: #707070;
+    --main-font: #707070;
     --about-card-bg: #137B7C;
     --card-buttons: #17EBEC;
     --white: #fff;
-  }
+    --main-font: #4F4646;
+
+    /* font-size */
+    --large: 20px;
+    --medium: 16px;
+    --small: 14px;
+    --micro: 12px;
+}
 
 body{
     background-color: var(--main-bg-color);
@@ -30,9 +37,9 @@ body{
     margin: 0 auto;
 }
 .container h1 {
-    color: #707070;
+    color: var(--main-font);
     line-height: 25px;
-    font-size: 20px;
+    font-size: var(--large);
     padding: 30px 0 0 20px;
 }
 .bold{
@@ -53,18 +60,18 @@ body{
     align-items: center;
 }
 .nav-link{
-    color: var(--nav-color);
+    color: var(--main-font);
 }
 .nav-link:last-child{
     margin-left: 92px;
 }
 .active {
-    border-bottom: 3px #717170 solid;
+    border-bottom: 3px var(--card-bg) solid;
     padding-bottom: 5px;
 }
 .site-logo a{
-    font-size: 20px;
-    color: var(--nav-color);
+    font-size: var(--large);
+    color: var(--main-font);
 
 }
 .main-input-wrapper{
@@ -83,7 +90,7 @@ body{
     outline: 0;
 }
 .term-of-week{
-    color: var(--nav-color);
+    color: var(--main-font);
     background-color: var(--secondary-color);
     padding: 20px;
     box-shadow: 2px 10px 16px #00000029;
@@ -100,26 +107,26 @@ body{
 }
 
 .term-detailed {
-    color: var(--nav-color);
+    color: var(--main-font);
     background-color: var(--secondary-color);
     padding: 20px;
 }
 
 .term-detailed h2 {
-    color: #707070;
-    font-size: 16px;
+    color: var(--main-font);
+    font-size: var(--medium);
     line-height: 19px;
 }
 
 .term-detailed p {
-    font-size: 16px;
+    font-size: var(--medium);
     line-height: 19px;
-    color: #707070;
+    color: var(--main-font);
     padding: 12px 0;
 }
 
 .term-detailed .content-differ {
-    border: 2px #fff solid;
+    border: 2px var(--white) solid;
     color: transparent;
     margin-bottom: 10px;
 }
@@ -132,9 +139,9 @@ body{
 }
 
 .term-detailed .example-flexbox p {
-    font-size: 16px;
+    font-size: var(--medium);
     line-height: 19px;
-    color: #707070;
+    color: var(--main-font);
     max-width: 578px;
 }
 
@@ -152,9 +159,9 @@ body{
 }
 
 .term-detailed .hashtag-wrapper span {
-    font-size: 14px;
+    font-size: var(--small);
     line-height: 17px;
-    color: #707070;
+    color: var(--main-font);
     padding-right: 20px;
 }
 
@@ -171,9 +178,9 @@ body{
 
 .terms-button-wrapper a {
     margin-right: 10px;
-    background-color: #707070;
-    color: #fff;
-    font-size: 16px;
+    background-color: var(--main-font);
+    color: var(--white);
+    font-size: var(--medium);
     line-height: 19px;
     padding: 10px;
 }
@@ -184,8 +191,9 @@ body{
 
 .hashtag-keywords{
     margin: 12px 0;
-    font-size: 14px;
+    font-size: var(--micro);
     line-height: 17px;
+    font-style: italic;
 }
 .button-wrapper{
     display: flex;
@@ -215,13 +223,11 @@ body{
 .term-card{
     color: var(--white);
     width: 346px;
-    height: 195px;
     background-color: var(--card-bg);
     margin: 20px 0;
     padding: 14px 20px;
     border-radius: 30px;
 }
-
 .flex-wrap-main {
     display: flex;
     flex-direction: column;
@@ -230,14 +236,6 @@ body{
     margin-top: 10px;
 }
 
-.term-card-main {
-    color: var(--nav-color);
-    width: 346px;
-    height: fit-content;
-    background-color: var(--secondary-color);
-    margin: 10px 0;
-    padding: 14px 20px;
-}
 .card-header{
     width: 194px;
     margin-bottom: 12px;
@@ -271,7 +269,7 @@ body{
     border-radius: 30px;
 }
 .about-title{
-    font-size: 20px;
+    font-size: var(--large);
     margin-bottom: 22px;
 }
 .about-info{
@@ -293,13 +291,14 @@ body{
     font-size: 18px;
     line-height: 22px;
     padding: 2px 8px;
-    color: #707070;
+    color: var(--main-font);
     margin: 0 2px;
 }
 
 .pagination .page-active {
-    background-color: #707070;
-    color: #fff;
+    background-color: var(--main-font);
+    color: var(--white);
+    border-radius: 50%;
 }
 
 #arrowLeft {
@@ -308,7 +307,7 @@ body{
 
 .footer{
     background-color: var(--secondary-color);
-    /* color: var(--nav-color); */
+    /* color: var(--main-font); */
     height: 160px;
     margin-top: 40px;
     padding: 20px 140px;
@@ -328,12 +327,12 @@ body{
     display: block;
     width: 513px;
     height: 1px;
-    background-color: var(--nav-color);
+    background-color: var(--main-font);
     margin-bottom: 30px;
 }
 
 .container .about-block {
-    color: var(--nav-color);
+    color: var(--main-font);
     background-color: var(--secondary-color);
     padding: 20px;
 }
@@ -344,13 +343,13 @@ body{
 
 .container .about-block p {
     padding: 10px 0;
-    font-size: 16px;
+    font-size: var(--medium);
     max-width: 950px;
     line-height: 19px;
 }
 
 .container .search-block {
-    color: var(--nav-color);
+    color: var(--main-font);
     background-color: var(--secondary-color);
     padding: 20px;
 }
@@ -368,7 +367,7 @@ body{
     position: absolute;
     left: 20px;
     top: 20px;
-    fill: #707070;
+    fill: var(--main-font);
 }
 
 .alphabet-wrapper {
@@ -378,9 +377,9 @@ body{
 }
 
 .alphabet-wrapper span {
-    font-size: 20px;
+    font-size: var(--large);
     line-height: 24px;
-    color: #707070;
+    color: var(--main-font);
     padding: 0 5px;
     cursor: pointer;
 }
@@ -388,22 +387,27 @@ body{
 .alphabet-wrapper .lchange {
     cursor: pointer;
     margin-left: 60px;
-    background-color: #717170;
-    color: #fff;
-    font-size: 16px;
+    background-color: var(--card-bg);
+    color: var(--white);
+    font-size: var(--medium);
     line-height: 19px;
     padding: 10px 5px;
+    border-radius: 50%;
+}
+
+.alphabet-wrapper .al-active {
+    color: var(--card-bg);
 }
 
 .container .search-block .searchbar form select {
-    font-size: 16px;
+    font-size: var(--medium);
     line-height: 19px;
     height: 25px;
     padding-left: 10px;
     outline: none;
     border-radius: 0%;
-    border: 1px #707070 solid;
-    color: #707070;
+    border: 1px var(--main-font) solid;
+    color: var(--main-font);
 }
 
 #filter {
@@ -423,7 +427,12 @@ cursor: pointer;
     top: 50%;
     transform: translate(-95%, -50%);
 }
-
+#filter, #sort {
+    border-radius: 13px;
+    background-color: var(--main-bg-color);
+    border: none;
+    color: #4F4646;
+}
 .container .search-block input[type=text] {
     background-color: #F5F5F5;
     width: 100%;
@@ -431,7 +440,8 @@ cursor: pointer;
     border: none;
     outline: none;
     padding: 0 29.5rem 0 3.2rem;
-    font-size: 14px;
+    font-size: var(--small);
+    border-radius: 30px;
 }
 
 .meet-team-wrapper {
@@ -468,7 +478,7 @@ cursor: pointer;
 }
 
 .team-member-card:hover .team-info p {
-    color: #fff;
+    color: var(--white);
 }
 
 .error-wrapper {
@@ -491,7 +501,7 @@ cursor: pointer;
 .error-wrapper button {
     width: 195px;
     height: 40px;
-    background-color: #707070;
+    background-color: var(--main-font);
     color: #F5F5F5;
     padding: 9px 21px;
     outline: none;
@@ -504,7 +514,7 @@ cursor: pointer;
 .errorpage-footer {
     margin-top: 211px;
     background-color: var(--secondary-color);
-    color: var(--nav-color);
+    color: var(--main-font);
     height: 160px;
     padding: 20px 140px;
 }

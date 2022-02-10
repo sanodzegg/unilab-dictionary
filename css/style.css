@@ -237,8 +237,20 @@ body{
 }
 
 .card-header{
-    width: 194px;
     margin-bottom: 12px;
+    display: flex;
+    max-height: 42px;
+}
+.term-header-title{
+    display: flex;
+    flex-direction: column;
+}
+.term-icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
 }
 .card-body{
     width: 297px;

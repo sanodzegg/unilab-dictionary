@@ -79,12 +79,21 @@ body{
     width: 100%;
     margin: 0 auto;
     padding: 30px 37px;
+    position: relative;
+
 }
 .main-input{
     width: 100%;
     height: 60px;
     border: 0;
-    padding: 20px;
+    padding: 20px 20px 20px 55px;
+    border-radius: 30px;
+}
+.search-icon{
+    position: absolute;
+    top: 50%;
+    left: 54px;
+    transform: translateY(-50%);
 }
 .main-input:focus{
     outline: 0;

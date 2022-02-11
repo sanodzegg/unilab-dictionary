@@ -1,10 +1,25 @@
-if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
+if(document.location.pathname == '/dictionary.html'){
     let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
     alphabet.forEach((letter)=> {
     let child = document.createElement('span');
+    child.setAttribute('class', 'al-letter');
     child.innerText = letter;
     document.querySelector('.alphabet-wrapper').appendChild(child)
 })
+let alpbox = document.querySelectorAll('.al-letter');
+for(let i = 0; i < alpbox.length; i++) {
+    alpbox[i].addEventListener('click', function(){
+        for(let e = 0; e < alpbox.length; e++) {
+            alpbox[e].classList.remove('al-active')
+        }
+        for(let a = 0; a < alpbox.length; a++) {
+            if(a == i) {
+                alpbox[a].classList.add('al-active')
+                break;
+            }
+        }
+    })
+}
 let lchange = document.createElement('span');
 lchange.className = 'lchange';
 lchange.innerText = 'ENG'
@@ -18,8 +33,8 @@ window.onload = function() {
     }
 }
 // 
-let cardHeader = 'testhead';
-let cardBody = 'testdesc';
+let cardHeader = 'ICT Project';
+let cardBody = 'ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული და საკომუნიკაციო';
 let hashtag = 'hashtagdesc';
 // 
 let terms = {
@@ -33,7 +48,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -53,7 +68,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -73,7 +88,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -97,7 +112,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -117,7 +132,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -137,7 +152,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -161,7 +176,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -181,7 +196,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -201,7 +216,7 @@ let terms = {
                         <h3><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -224,15 +239,15 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'First'}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${'Project management - პროექტის მენეჯმენტი'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${`ადამიანური, მატერიალური და დროითი რეს...`}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
+                            <span>#${`#გრაფიკულიდიზაინი`}</span>
+                            <span>#${`#გრაფიკულიდიზაინი`}</span>
                         </div>
                         <div class="button-wrapper">
                             <a href="#" class="see-details">ნახე სრულად</a>
@@ -244,10 +259,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -264,10 +279,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -288,10 +303,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -308,10 +323,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -328,10 +343,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -352,10 +367,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -372,10 +387,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -392,10 +407,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -418,10 +433,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'Second'}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${'Second'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -438,10 +453,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -458,10 +473,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -482,10 +497,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -502,10 +517,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -522,10 +537,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -546,10 +561,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -566,10 +581,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -586,10 +601,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -612,10 +627,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'Third'}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${'Third'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -632,10 +647,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -652,10 +667,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -676,10 +691,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -696,10 +711,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -716,10 +731,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -740,10 +755,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -760,10 +775,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -780,10 +795,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -806,10 +821,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'Fourth'}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${'Fourth'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -826,10 +841,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -846,10 +861,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -870,10 +885,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -890,10 +905,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -910,10 +925,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -934,10 +949,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -954,10 +969,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -974,10 +989,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1000,10 +1015,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${'Fifth'}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${'Fifth'}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1020,10 +1035,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1040,10 +1055,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1064,10 +1079,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1084,10 +1099,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1104,10 +1119,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1128,10 +1143,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1148,10 +1163,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1168,10 +1183,10 @@ let terms = {
                     content : 
                     `
                     <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
+                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
                     </div>
                     <div class="card-body">
-                        <p class="term-descriptioin">${cardBody}</p>
+                        <p class="term-description">${cardBody}</p>
                     </div>
                     <div class="card-footer">
                         <div class="hashtag-keywords">
@@ -1196,7 +1211,7 @@ function generateTerms(val) {
         parent.appendChild(wrapper);
         for(let a = 0; a < Object.keys(terms[val]).length; a++) {
             let main = document.createElement('div');
-            main.setAttribute('class', 'term-card-main');
+            main.setAttribute('class', 'term-card');
             wrapper.appendChild(main);
             main.innerHTML = terms[val][i].main[i].content;
         }

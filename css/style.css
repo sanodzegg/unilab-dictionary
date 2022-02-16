@@ -199,7 +199,10 @@ body{
 }
 
 .hashtag-keywords{
-    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     font-size: var(--micro);
     line-height: 17px;
     font-style: italic;
@@ -282,6 +285,8 @@ body{
 .card-footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: fit-content;
 }
 .about-project{
     padding: 20px;

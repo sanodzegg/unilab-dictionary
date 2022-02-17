@@ -70,9 +70,9 @@ body{
     padding-bottom: 5px;
 }
 .site-logo a{
-    font-size: var(--large);
     color: var(--main-font);
-
+    display: block;
+    height: 38px;
 }
 .main-input-wrapper{
     max-width: 1014px;

@@ -38,17 +38,17 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign']
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['graphicdesign', 'mid']
+                    hashtags : ['second', 'mid']
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['third', 'graphicdesign']
                 }
@@ -57,36 +57,36 @@ let terms = {
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'hashtag']
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'hashtag']
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'hashtag']
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'hashtag']
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'hashtag']
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'hashtag']
                 }
@@ -461,10 +461,10 @@ function generateTerms(val) {
             main.innerHTML = 
             `
                 <div class="card-header">
-                    <h3 class="term-header-title"><span class="bold">${terms[val][i].main[i].header}</span></h3>
+                    <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
                 </div>
                 <div class="card-body">
-                    <p class="term-description">${terms[val][i].main[i].body}</p>
+                    <p class="term-description">${terms[val][i].main[a].body}</p>
                 </div>
                 <div class="card-footer">
                     <div class="hashtag-keywords">

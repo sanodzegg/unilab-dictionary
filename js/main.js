@@ -40,17 +40,20 @@ let terms = {
                 0 : {
                     header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
                     header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
                     header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
@@ -59,17 +62,20 @@ let terms = {
                 0 : {
                     header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
                     header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
                     header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
@@ -78,17 +84,20 @@ let terms = {
                 0 : {
                     header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
                     header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
                     header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -97,57 +106,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -156,57 +174,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -215,57 +242,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fourth', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fourth', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fourth', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -274,57 +310,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fifth', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fifth', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['fifth', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -333,57 +378,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['sixth', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['sixth', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['sixth', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -392,57 +446,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['seventh', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['seventh', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['seventh', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'პირველი',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    header : 'Project management - პროექტის მენეჯმენტი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'hashtag']
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -461,6 +524,9 @@ function generateTerms(val) {
             main.innerHTML = 
             `
                 <div class="card-header">
+                <span class="term-icon">
+                    <img src="${terms[val][i].main[a].iconPath}" alt="${terms[val][i].main[a].header}">
+                </span>
                     <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
                 </div>
                 <div class="card-body">

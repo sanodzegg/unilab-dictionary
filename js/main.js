@@ -1,4 +1,4 @@
-if(document.location.pathname == '/dictionary.html'){
+if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
     let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
     alphabet.forEach((letter)=> {
     let child = document.createElement('span');

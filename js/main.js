@@ -341,7 +341,6 @@ function generateTerms(val) {
             let main = document.createElement('div');
             main.setAttribute('class', 'term-card');
             wrapper.appendChild(main);
-            console.log(Object.keys(terms[val]).length);
             try {
                 main.innerHTML = 
                 `

@@ -1,4 +1,4 @@
-if(document.location.pathname == '/dictionary.html'){
+if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
     let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
     alphabet.forEach((letter)=> {
     let child = document.createElement('span');
@@ -106,7 +106,7 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
+                    header : 'მეორე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign'],
                     iconPath: '../media/svg/term-cards/term-icon-1.svg'
@@ -174,7 +174,7 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
+                    header : 'მესამე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign'],
                     iconPath: '../media/svg/term-cards/term-icon-1.svg'
@@ -242,91 +242,23 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
+                    header : 'მეოთხე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['second', 'mid'],
                     iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
             }
         },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
     },
     4 : {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
+                    header : 'მეხუთე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign'],
                     iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
             }
         },
         1 : {
@@ -378,7 +310,7 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
+                    header : 'მეექვსე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign'],
                     iconPath: '../media/svg/term-cards/term-icon-1.svg'
@@ -446,7 +378,7 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    header : 'პირველი',
+                    header : 'მეშვიდე',
                     body : `ადამიანური, მატერიალური და დროითი რეს...`,
                     hashtags : ['first', 'graphicdesign'],
                     iconPath: '../media/svg/term-cards/term-icon-1.svg'
@@ -517,32 +449,37 @@ function generateTerms(val) {
         let wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'term-cards-wrapper');
         parent.appendChild(wrapper);
-        for(let a = 0; a < Object.keys(terms[val]).length; a++) {
+        for(let a = 0; a <= 3; a++) {
             let main = document.createElement('div');
             main.setAttribute('class', 'term-card');
             wrapper.appendChild(main);
-            main.innerHTML = 
-            `
-                <div class="card-header">
-                <span class="term-icon">
-                    <img src="${terms[val][i].main[a].iconPath}" alt="${terms[val][i].main[a].header}">
-                </span>
-                    <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
-                </div>
-                <div class="card-body">
-                    <p class="term-description">${terms[val][i].main[a].body}</p>
-                </div>
-                <div class="card-footer">
-                    <div class="hashtag-keywords">
-                        ${terms[val][i].main[a].hashtags.map(e => {
-                            return `<span>#${e}</span>`
-                        }).join('')}
+            try {
+                main.innerHTML = 
+                `
+                    <div class="card-header">
+                        <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
                     </div>
-                    <div class="button-wrapper">
-                        <a href="#" class="see-details">ნახე სრულად</a>
+                    <div class="card-body">
+                        <p class="term-description">${terms[val][i].main[a].body}</p>
                     </div>
-                </div>
-            `
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            ${terms[val][i].main[a].hashtags.map(e => {
+                                return `<span>#${e}</span>`
+                            }).join('')}
+                        </div>
+                        <div class="button-wrapper">
+                            <a href="#" class="see-details">ნახე სრულად</a>
+                        </div>
+                    </div>
+                `
+            } catch(err) {
+                for(let i = 0; i < document.querySelectorAll('.term-card').length; i++) {
+                    if(document.querySelectorAll('.term-card')[i].innerHTML == '') {
+                        document.querySelectorAll('.term-card')[i].remove();
+                    }
+                }
+            }
         }
     }
 }
@@ -599,7 +536,7 @@ function generatePages() {
     pgParent.append(arrow)
     document.querySelector('.dots-wrap').addEventListener('click', function(){
         pgParent.innerHTML = '';
-        for(let i = 0; i < Object.keys(terms).length - 1; i++) {
+        for(let i = 0; i < Object.keys(terms).length; i++) {
             let page = document.createElement('span');
             page.setAttribute('class', 'page-el');
             page.innerText = i+1;
@@ -616,6 +553,7 @@ function generatePages() {
                 paginationClicked = parseInt(box[i].innerText);
             })
         }
+        paginationClicked = paginationClicked + 1;
         for(let i = 0; i < box.length; i++) {
             box[i].addEventListener('click', function(){
                 paginationClicked = parseInt(box[i].innerText);

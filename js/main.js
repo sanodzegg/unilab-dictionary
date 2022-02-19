@@ -1,4 +1,4 @@
-if(document.location.pathname == '/dictionary.html'){
+if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
     let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
     alphabet.forEach((letter)=> {
     let child = document.createElement('span');
@@ -26,208 +26,78 @@ lchange.innerText = 'ENG'
 document.querySelector('.alphabet-wrapper').appendChild(lchange)
 let parent = document.querySelector('.pagination-parent');
 window.onload = function() {
-    generateTerms(1);
+    generateTerms(0);
     if(Object.keys(terms).length > 1) {
         generatePages();
         document.querySelector('.page-el').classList.add('page-active')
     }
 }
-// 
-let cardHeader = 'ICT Project';
-let cardBody = 'ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული და საკომუნიკაციო';
-let hashtag = 'hashtagdesc';
-// 
+
 let terms = {
     0 : {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -236,192 +106,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${'Project management - პროექტის მენეჯმენტი'}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${`ადამიანური, მატერიალური და დროითი რეს...`}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${`#გრაფიკულიდიზაინი`}</span>
-                            <span>#${`#გრაფიკულიდიზაინი`}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -430,192 +174,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${'Second'}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -624,386 +242,66 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${'Third'}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეოთხე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
-                1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                }
             }
         },
-        1 : {
-            main : {
-                0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                }
-            }
-        }
     },
     4 : {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${'Fourth'}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეხუთე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
-                1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                },
-                2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
-                }
             }
         },
         1 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -1012,192 +310,134 @@ let terms = {
         0 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${'Fifth'}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეექვსე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         1 : {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         },
         2: {
             main : {
                 0 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
                 },
                 1 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
                 },
                 2 : {
-                    content : 
-                    `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${cardHeader}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${cardBody}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            <span>#${hashtag}</span>
-                            <span>#${hashtag}</span>
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                    `
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
+                }
+            }
+        }
+    },
+    6 : {
+        0 : {
+            main : {
+                0 : {
+                    header : 'მეშვიდე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
+                },
+                1 : {
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
+                },
+                2 : {
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
+                }
+            }
+        },
+        1 : {
+            main : {
+                0 : {
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
+                },
+                1 : {
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
+                },
+                2 : {
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
+                }
+            }
+        },
+        2: {
+            main : {
+                0 : {
+                    header : 'პირველი',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['first', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
+                },
+                1 : {
+                    header : 'მეორე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['second', 'mid'],
+                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
+                },
+                2 : {
+                    header : 'მესამე',
+                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
+                    hashtags : ['third', 'graphicdesign'],
+                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
                 }
             }
         }
@@ -1209,16 +449,42 @@ function generateTerms(val) {
         let wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'term-cards-wrapper');
         parent.appendChild(wrapper);
-        for(let a = 0; a < Object.keys(terms[val]).length; a++) {
+        for(let a = 0; a <= 3; a++) {
             let main = document.createElement('div');
             main.setAttribute('class', 'term-card');
             wrapper.appendChild(main);
-            main.innerHTML = terms[val][i].main[i].content;
+            try {
+                main.innerHTML = 
+                `
+                    <div class="card-header">
+                        <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="term-description">${terms[val][i].main[a].body}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="hashtag-keywords">
+                            ${terms[val][i].main[a].hashtags.map(e => {
+                                return `<span>#${e}</span>`
+                            }).join('')}
+                        </div>
+                        <div class="button-wrapper">
+                            <a href="#" class="see-details">ნახე სრულად</a>
+                        </div>
+                    </div>
+                `
+            } catch(err) {
+                for(let i = 0; i < document.querySelectorAll('.term-card').length; i++) {
+                    if(document.querySelectorAll('.term-card')[i].innerHTML == '') {
+                        document.querySelectorAll('.term-card')[i].remove();
+                    }
+                }
+            }
         }
     }
 }
 
-let paginationClicked = 1;
+let paginationClicked = 0;
 
 function generatePages() {
     let pgParent = document.querySelector('.pagination')
@@ -1248,7 +514,7 @@ function generatePages() {
             paginationClicked = parseInt(box[i].innerText);
             let parent = document.querySelector('.pagination-parent');
             parent.innerHTML = '';
-            parent = generateTerms(paginationClicked);
+            parent = generateTerms(paginationClicked-1);
             for(let e = 0; e < box.length; e++) {
                 box[e].classList.remove('page-active')
             }
@@ -1270,25 +536,30 @@ function generatePages() {
     pgParent.append(arrow)
     document.querySelector('.dots-wrap').addEventListener('click', function(){
         pgParent.innerHTML = '';
-        for(let i = 0; i < Object.keys(terms).length - 1; i++) {
+        for(let i = 0; i < Object.keys(terms).length; i++) {
             let page = document.createElement('span');
             page.setAttribute('class', 'page-el');
             page.innerText = i+1;
             pgParent.appendChild(page);
         }
         let box = document.querySelectorAll('.page-el');
-        box[paginationClicked-1].classList.add('page-active');
+        try {
+            box[paginationClicked-1].classList.add('page-active');
+        } catch(err) {
+            box[0].classList.add('page-active');
+        }
         for(let i = 0; i < box.length; i++) {
             box[i].addEventListener('click', function(){
                 paginationClicked = parseInt(box[i].innerText);
             })
         }
+        paginationClicked = paginationClicked + 1;
         for(let i = 0; i < box.length; i++) {
             box[i].addEventListener('click', function(){
                 paginationClicked = parseInt(box[i].innerText);
                 let parent = document.querySelector('.pagination-parent');
                 parent.innerHTML = '';
-                parent = generateTerms(paginationClicked);
+                parent = generateTerms(paginationClicked-1);
                 for(let e = 0; e < box.length; e++) {
                     box[e].classList.remove('page-active')
                 }
@@ -1301,6 +572,7 @@ function generatePages() {
             })
         }
     })
+    paginationClicked = paginationClicked + 1;
     document.getElementById('scrollRight').addEventListener('click', function(){
         paginationClicked++;
         if(paginationClicked <= 4) {
@@ -1309,7 +581,7 @@ function generatePages() {
             }
             box[paginationClicked-1].classList.add('page-active');
             parent.innerHTML = '';
-            generateTerms(paginationClicked)
+            generateTerms(paginationClicked-1)
         } else {
             paginationClicked = 4;
         }
@@ -1322,7 +594,7 @@ function generatePages() {
             }
             box[paginationClicked-1].classList.add('page-active');
             parent.innerHTML = '';
-            generateTerms(paginationClicked)
+            generateTerms(paginationClicked-1)
         } else {
             paginationClicked = 1;
         }

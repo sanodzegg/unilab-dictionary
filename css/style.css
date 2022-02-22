@@ -236,12 +236,12 @@ body{
     border-radius: 20px;
     
 }
-/* .term-cards-wrapper{
+.term-cards-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-} */
+}
 .term-card{
     flex: 1;
     color: var(--white);
@@ -267,7 +267,6 @@ body{
 .card-header{
     margin-bottom: 12px;
     display: flex;
-    max-height: 27px;
     overflow: hidden;
     text-overflow: ellipsis;
 }

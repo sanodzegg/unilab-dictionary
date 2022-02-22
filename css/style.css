@@ -236,17 +236,18 @@ body{
     border-radius: 20px;
     
 }
-.term-cards-wrapper{
+/* .term-cards-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
+} */
 .term-card{
+    flex: 1;
     color: var(--white);
     width: 346px;
     background-color: var(--card-bg);
-    margin: 20px 0;
+    margin: 12.5px;
     padding: 14px 20px;
     border-radius: 30px;
     display: flex;
@@ -257,7 +258,7 @@ body{
 
 .flex-wrap-main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
@@ -328,6 +329,7 @@ body{
     max-width: 100%;
     text-align: center;
     padding: 32px 0 2px 0;
+    user-select: none;
 }
 
 .pagination span {

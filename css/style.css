@@ -240,6 +240,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 .term-card{
@@ -266,7 +267,8 @@ body{
 .card-header{
     margin-bottom: 12px;
     display: flex;
-    max-height: 27px;
+    align-items: center;
+    min-height: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -563,4 +565,13 @@ cursor: pointer;
     font-size: 18px;
     line-height: 22px;
     cursor: pointer;
+}
+
+
+
+/* responsive */
+@media (max-width: 1080px){
+    .term-cards-wrapper{
+        justify-content: space-around;
+    }
 }

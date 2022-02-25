@@ -38,14 +38,15 @@ a{
 /* FONTS */
 /* variables */
 :root {
-    --main-bg-color: #EAEAEA;
+    --main-bg-color: #FDFBF9E0;
     --secondary-color: #E8E8E8;
-    --card-bg: #1BA8A9;
+    --card-bg: #8C1E1F;
     --main-font: #707070;
     --about-card-bg: #137B7C;
     --card-buttons: #17EBEC;
     --white: #fff;
     --main-font: #4F4646;
+    --dark-text: #323232;
 
     /* font-size */
     --large: 20px;
@@ -125,18 +126,19 @@ body{
     outline: 0;
 }
 .term-of-week{
-    color: var(--main-font);
-    background-color: var(--secondary-color);
+    color: var(--white);
+    background-color: var(--card-bg);
     padding: 20px;
     box-shadow: 2px 10px 16px #00000029;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 .term-of-week h2{
     color: var(--white);
     font-family: 'BPG-regular';
 }
 .term-of-week .see-details{
-    background-color: var(--card-bg);
+    background-color: #FBF5E7;
+    color: #323232;
 }
 .term-title{
     margin: 12px 0;
@@ -249,8 +251,8 @@ body{
     border: 0;
 }
 .see-details{
-    color: white;
-    background-color: var(--card-buttons);
+    color: var(--white);
+    background-color: var(--card-bg);
     padding: 11px 15px 10px 16px;
     height: 40px;
     width: 140px;
@@ -265,12 +267,12 @@ body{
     width: 100%;
 }
 .term-card{
-    color: var(--white);
+    color: var(--card-bg);
     width: 346px;
-    background-color: var(--card-bg);
+    background-color: var(--white);
     margin: 20px 0;
     padding: 14px 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -316,7 +318,8 @@ body{
 }
 .week-term-description{
     max-height: 20px;
-    width: 884px;
+    max-width: 884px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -337,8 +340,7 @@ body{
 }
 .about-project{
     padding: 20px;
-    background-color: var(--about-card-bg);
-    color: var(--white);
+    color: var(--dark-text);
     border-radius: 30px;
 }
 .about-title{
@@ -433,6 +435,10 @@ body{
     top: 20px;
     fill: var(--main-font);
 }
+.alphabet {
+    display: flex;
+    align-items: center;
+}
 .alphabet-wrapper {
     text-align: center;
     margin: 0 auto;
@@ -441,8 +447,24 @@ body{
 .alphabet-wrapper span {
     font-size: var(--large);
     line-height: 24px;
-    color: var(--main-font);
+    color: #4F4646;
     padding: 0 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: .3s ease-in-out;
+}
+.alphabet-switcher{
+    height: 40px;
+    width: 40px;
+    background-color: #8C1E1F;
+    border-radius: 20px;
+}
+.switch-face {
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 .alphabet-wrapper .lchange {
@@ -571,5 +593,11 @@ cursor: pointer;
 @media (max-width: 1080px){
     .term-cards-wrapper{
         justify-content: space-around;
+    }
+}
+@media (max-width: 768px) {
+    .alphabet-wrapper span {
+        padding: 0 2px;
+
     }
 }

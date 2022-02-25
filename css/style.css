@@ -246,6 +246,7 @@ body{
     flex: 1;
     color: var(--white);
     width: 346px;
+    max-width: 346px;
     background-color: var(--card-bg);
     margin: 12.5px;
     padding: 14px 20px;
@@ -259,7 +260,7 @@ body{
 .flex-wrap-main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 10px;
 }

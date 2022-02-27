@@ -453,7 +453,7 @@ body{
     transition: .3s ease-in-out;
 }
 .alphabet-wrapper span.active-letter{
-    background-color: #ccc;
+    font-weight: bold;
 }
 .alphabet-switcher{
     height: 40px;

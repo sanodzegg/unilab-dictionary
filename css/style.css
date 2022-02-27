@@ -107,7 +107,6 @@ body{
     margin: 0 auto;
     padding: 30px 37px;
     position: relative;
-
 }
 .main-input{
     width: 100%;
@@ -452,6 +451,9 @@ body{
     cursor: pointer;
     margin-right: 5px;
     transition: .3s ease-in-out;
+}
+.alphabet-wrapper span.active-letter{
+    background-color: #ccc;
 }
 .alphabet-switcher{
     height: 40px;

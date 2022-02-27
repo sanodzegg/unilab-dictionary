@@ -72,115 +72,101 @@ const data = [
         iconPath: '../media/svg/term-cards/term-icon-3.svg'
     },
 ]
-const alphabetArrGeo = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ']
-const alphabetArrEng = ['a','b','c','d','e','f','g','h','i','j','k','l','m','o','p','q','r','s','t','u','v','w','x','y','z']
+const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
+const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const cardsWrapper = document.querySelector('.term-cards-wrapper')
+if (document.location.pathname == '/index.html') {
 
+    const dataToRender = data.filter(item => item.id < 3)
+
+    renderData(dataToRender)
+}
 if (document.location.pathname == '/dictionary.html') {
     const alphabetWrapper = document.querySelector('.alphabet-wrapper')
-    alphabetGenerator(alphabetArrEng)
     
+    
+    alphabetGenerator(alphabetArrGeo)
+
     const switchFace = document.querySelector('.switch-face')
     const switchTextEng = 'ENG'
     const switchTextGeo = 'ქარ'
     switchFace.innerText = switchTextEng
 
     switchFace.addEventListener('click', () => {
-        if (switchFace.innerText == switchTextEng){
+        if (switchFace.innerText == switchTextEng) {
             switchFace.innerText = switchTextGeo
             alphabetWrapper.innerText = ''
-            alphabetGenerator(alphabetArrGeo)
+            alphabetGenerator(alphabetArrEng)
         }
         else {
             switchFace.innerText = switchTextEng
             alphabetWrapper.innerText = ''
-            alphabetGenerator(alphabetArrEng)
+            alphabetGenerator(alphabetArrGeo)
         }
-        
+
     })
-    function alphabetGenerator (alphabetArray) {
+
+    const dataToRender = data.filter(item => item.id < 10)
+
+    renderData(dataToRender)
+
+
+    const search = document.querySelector('#dictionary-search')
+    search.addEventListener('keyup', (e) => {
+        cardsWrapper.innerHTML = ''
+        const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
+        renderData(filteredData)
+
+    })
+    function alphabetGenerator(alphabetArray) {
         alphabetArray.forEach((letter) => {
             const letterSpan = document.createElement('span')
             letterSpan.setAttribute('class', 'letter-box')
             letterSpan.innerText = letter
             alphabetWrapper.append(letterSpan)
             letterSpan.addEventListener('click', (e) => {
-                console.log(letter);
-                console.log(e.target);
+               console.log(e.target);
             })
         })
     }
-    const dataToRender = data.filter(item => item.id  < 10) 
     
-    dataToRender.forEach((element) => {
-        const card = document.createElement('div')
-        card.setAttribute('class', 'term-card')
-        cardsWrapper.append(card)
-        card.innerHTML = `
-                      <div class="card-header">
-                          <span class="term-icon">
-                              <img src="${element.iconPath}" alt="third icon">
-                          </span>
-                          <h3 class="term-header-title"><span class="bold">${element.titleEng} -</span><span>${element.titleGeo}</span></h3>
-                      </div>
-                      <div class="card-body">
-                          <p class="term-description">${element.Description}</p>
-                      </div>
-                      <div class="card-footer">
-                          <div class="hashtag-keywords">
-                              <span>#${element.hashTags[0]}</span>
-                              <span>#${element.hashTags[1]}</span>
-                          </div>
-                          <div class="button-wrapper">
-                              <a href="#" class="see-details">ნახე სრულად</a>
-                          </div>
-                      </div>
-        `
-    }) 
-    
-    
-
-    
-
     
 
 }
 
 
-if(document.location.pathname == '/index.html') {
-    
-    const dataToRender = data.filter(item => item.id  < 3) 
-    
-    dataToRender.forEach((element) => {
+
+
+
+
+
+
+
+function renderData(array) {
+    array.forEach((element) => {
         const card = document.createElement('div')
         card.setAttribute('class', 'term-card')
         cardsWrapper.append(card)
         card.innerHTML = `
-                      <div class="card-header">
-                          <span class="term-icon">
-                              <img src="${element.iconPath}" alt="third icon">
-                          </span>
-                          <h3 class="term-header-title"><span class="bold">${element.titleEng} -</span><span>${element.titleGeo}</span></h3>
+                  <div class="card-header">
+                      <span class="term-icon">
+                          <img src="${element.iconPath}" alt="third icon">
+                      </span>
+                      <h3 class="term-header-title"><span class="bold">${element.titleEng} -</span><span>${element.titleGeo}</span></h3>
+                  </div>
+                  <div class="card-body">
+                      <p class="term-description">${element.Description}</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="hashtag-keywords">
+                          <span>#${element.hashTags[0]}</span>
+                          <span>#${element.hashTags[1]}</span>
                       </div>
-                      <div class="card-body">
-                          <p class="term-description">${element.Description}</p>
+                      <div class="button-wrapper">
+                          <a href="#" class="see-details">ნახე სრულად</a>
                       </div>
-                      <div class="card-footer">
-                          <div class="hashtag-keywords">
-                              <span>#${element.hashTags[0]}</span>
-                              <span>#${element.hashTags[1]}</span>
-                          </div>
-                          <div class="button-wrapper">
-                              <a href="#" class="see-details">ნახე სრულად</a>
-                          </div>
-                      </div>
-        `
+                  </div>
+    `
     })
 }
-
-
-
-
-
-

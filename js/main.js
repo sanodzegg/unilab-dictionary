@@ -87,7 +87,7 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
     
     
     alphabetGenerator(alphabetArrGeo)
-
+    lettersOnClick()
     const switchFace = document.querySelector('.switch-face')
     const switchTextEng = 'ENG'
     const switchTextGeo = 'ქარ'
@@ -98,15 +98,17 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
             switchFace.innerText = switchTextGeo
             alphabetWrapper.innerText = ''
             alphabetGenerator(alphabetArrEng)
+            lettersOnClick()
         }
         else {
             switchFace.innerText = switchTextEng
             alphabetWrapper.innerText = ''
             alphabetGenerator(alphabetArrGeo)
+            lettersOnClick()
         }
 
     })
-
+    
     const dataToRender = data.filter(item => item.id < 10)
 
     renderData(dataToRender)
@@ -130,8 +132,16 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
             })
         })
     }
-    
-    
+
+    function lettersOnClick() {
+        const letterBoxes = document.querySelectorAll('.letter-box')
+        letterBoxes.forEach(letterBox => {
+            letterBox.addEventListener('click', function () {
+                letterBoxes.forEach(letter => letter.classList.remove('active-letter'))
+                letterBox.classList.add('active-letter')
+            })
+        })
+    }
 
 }
 

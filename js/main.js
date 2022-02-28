@@ -4,72 +4,81 @@ const data = [
         titleEng: 'Project management',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-1.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: '../media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
     },
     {
         id: 1,
         titleEng: 'Project manager',
         titleGeo: 'პროექტის მენეჯერი',
         Description: ' PM, ერთ-ერთი მთავარი მონაწილე პროექტში. მისი როლი არის',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-2.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: '../media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
     },
     {
         id: 2,
         titleEng: 'ICT Project',
         titleGeo: 'ICT პროექტი',
         Description: 'ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული და საკომუნიკაციო',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-3.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: '../media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
     },
     {
         id: 3,
         titleEng: 'Project management 3',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-1.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: '../media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
     },
     {
         id: 4,
         titleEng: 'Project management 4',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-2.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: '../media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
     },
     {
         id: 5,
         titleEng: 'Project management 5',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-3.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: '../media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
     },
     {
         id: 6,
         titleEng: 'Project management 6',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-1.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: '../media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
     },
     {
         id: 7,
         titleEng: 'Project management 7',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-2.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: '../media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
     },
     {
         id: 8,
         titleEng: 'Project management 8',
         titleGeo: 'პროექტის მენეჯმენტი',
         Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
-        hashTags: ['გრაფიკულიდიზაინი', 'პროექტისმენეჯმენტი'],
-        iconPath: '../media/svg/term-cards/term-icon-3.svg'
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: '../media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
     },
 ]
 const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
@@ -77,13 +86,13 @@ const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', '
 
 const cardsWrapper = document.querySelector('.term-cards-wrapper')
 if (document.location.pathname == '/unilab-dictionary/index.html') {
-
     const dataToRender = data.filter(item => item.id < 3)
 
     renderData(dataToRender)
 }
 if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
     const alphabetWrapper = document.querySelector('.alphabet-wrapper')
+    const searchFilter = document.querySelector('#filter')
     
     
     alphabetGenerator(alphabetArrGeo)
@@ -113,6 +122,17 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
 
     renderData(dataToRender)
 
+    searchFilter.addEventListener('click', () => {
+        const searchFilterData = data.filter(item => item.keyword ==searchFilter.value)
+        if(searchFilter.value !== 'default'){
+            cardsWrapper.innerHTML = ''
+            renderData(searchFilterData)
+            console.log(searchFilter.value)
+            console.log(searchFilter)
+            console.log(searchFilterData)
+        }
+        
+    })
 
     const search = document.querySelector('#dictionary-search')
     search.addEventListener('keyup', (e) => {
@@ -121,6 +141,7 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
         renderData(filteredData)
 
     })
+
     function alphabetGenerator(alphabetArray) {
         alphabetArray.forEach((letter) => {
             const letterSpan = document.createElement('span')

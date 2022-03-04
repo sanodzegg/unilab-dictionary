@@ -82,7 +82,7 @@ const data = [
     },
 ]
 const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
-const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const cardsWrapper = document.querySelector('.term-cards-wrapper')
 if (document.location.pathname == '/unilab-dictionary/index.html') {
@@ -93,8 +93,12 @@ if (document.location.pathname == '/unilab-dictionary/index.html') {
 if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
     const alphabetWrapper = document.querySelector('.alphabet-wrapper')
     const searchFilter = document.querySelector('#filter')
-    
-    
+    const resultCounter = document.querySelector('.search-result-counter')
+    const messageWrapper = document.querySelector('.counter-wrapper')
+    const notFoundMessage = document.querySelector('.not-found-message-wrapper')
+
+
+
     alphabetGenerator(alphabetArrGeo)
     lettersOnClick()
     const switchFace = document.querySelector('.switch-face')
@@ -117,41 +121,66 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
         }
 
     })
-    
+
     const dataToRender = data.filter(item => item.id < 10)
 
     renderData(dataToRender)
 
     searchFilter.addEventListener('click', () => {
-        const searchFilterData = data.filter(item => item.keyword ==searchFilter.value)
-        if(searchFilter.value !== 'default'){
+        const searchFilterData = data.filter(item => item.keyword == searchFilter.value)
+        searchCounter (searchFilterData)
+        if (searchFilter.value !== 'default') {
             cardsWrapper.innerHTML = ''
             renderData(searchFilterData)
-            console.log(searchFilter.value)
-            console.log(searchFilter)
-            console.log(searchFilterData)
         }
-        
     })
 
     const search = document.querySelector('#dictionary-search')
     search.addEventListener('keyup', (e) => {
         cardsWrapper.innerHTML = ''
         const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
+        searchCounter (filteredData)
         renderData(filteredData)
 
     })
 
+
+
+    function searchCounter (arr) {
+        if(arr !== null) {
+            messageWrapper.style.display = 'block'
+            resultCounter.innerText = arr.length
+        if(resultCounter.innerText == 0){
+            notFoundMessage.style.display = 'flex'
+        }else{
+            notFoundMessage.style.display = 'none'
+        }
+        }
+    }
+
+
     function alphabetGenerator(alphabetArray) {
-        alphabetArray.forEach((letter) => {
-            const letterSpan = document.createElement('span')
-            letterSpan.setAttribute('class', 'letter-box')
-            letterSpan.innerText = letter
-            alphabetWrapper.append(letterSpan)
-            letterSpan.addEventListener('click', (e) => {
-               console.log(e.target);
+        if (alphabetArray[0] == alphabetArrGeo[0]) {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
             })
-        })
+        } else {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter.toUpperCase()
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
+            })
+        }
     }
 
     function lettersOnClick() {

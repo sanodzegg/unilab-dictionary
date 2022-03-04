@@ -265,6 +265,26 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
+.counter-wrapper{
+    display: none;
+}
+.counter-wrapper span{
+    font-family: 'firaGo-regular';
+    line-height: 19px;
+}
+.not-found-message-wrapper{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+.not-found-message{
+    font-family: 'firaGo-regular';
+    font-size: 22px;
+    line-height: 27px;
+    display: block;
+}
 .term-card{
     color: var(--card-bg);
     width: 346px;
@@ -500,7 +520,7 @@ body{
     transform: translate(-73%, -50%);
 }
 select{
-cursor: pointer;
+    cursor: pointer;
 }
 #sort {
     width: 144px;

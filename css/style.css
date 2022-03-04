@@ -378,17 +378,17 @@ body{
 .pagination span {
     cursor: pointer;
 }
-.pagination .page-el, .pagination .dots-wrap {
+.page-number{
+    height: 26px;
+    width: 26px;
+    border-radius: 13px;
     font-size: 18px;
     line-height: 22px;
     padding: 2px 8px;
-    color: var(--main-font);
-    margin: 0 2px;
+    transition: .2s ease-in-out;
 }
-.pagination .page-active {
-    background-color: var(--main-font);
-    color: var(--white);
-    border-radius: 50%;
+.page-number.active-page {
+    background-color: #8A8FA3;
 }
 #arrowLeft {
     pointer-events: none;

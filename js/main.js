@@ -80,9 +80,207 @@ const data = [
         iconPath: 'media/svg/term-cards/term-icon-3.svg',
         keyword: 'python'
     },
+    {
+        id: 9,
+        titleEng: 'Project management 9',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 10,
+        titleEng: 'Project management 10',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 11,
+        titleEng: 'Project management 11',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 12,
+        titleEng: 'Project management 12',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 13,
+        titleEng: 'Project management 13',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 14,
+        titleEng: 'Project management 14',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 15,
+        titleEng: 'Project management 15',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 16,
+        titleEng: 'Project management 16',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 17,
+        titleEng: 'Project management 17',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 18,
+        titleEng: 'Project management 18',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 19,
+        titleEng: 'Project management 19',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 20,
+        titleEng: 'Project management 20',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 21,
+        titleEng: 'Project management 21',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 22,
+        titleEng: 'Project management 22',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 23,
+        titleEng: 'Project management 23',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 24,
+        titleEng: 'Project management 24',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 25,
+        titleEng: 'Project management 25',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 26,
+        titleEng: 'Project management 26',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 27,
+        titleEng: 'Project management 27',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 28,
+        titleEng: 'Project management 28',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 29,
+        titleEng: 'Project management 29',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 30,
+        titleEng: 'Project management 30',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
 ]
 const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
-const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const cardsWrapper = document.querySelector('.term-cards-wrapper')
 if (document.location.pathname == '/unilab-dictionary/index.html') {
@@ -93,8 +291,40 @@ if (document.location.pathname == '/unilab-dictionary/index.html') {
 if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
     const alphabetWrapper = document.querySelector('.alphabet-wrapper')
     const searchFilter = document.querySelector('#filter')
+    const resultCounter = document.querySelector('.search-result-counter')
+    const messageWrapper = document.querySelector('.counter-wrapper')
+    const notFoundMessage = document.querySelector('.not-found-message-wrapper')
+    const paginationWrapper = document.querySelector('.pagination')
+    const termsPerPage = 9
+    const roundedTermsNum = Math.ceil(data.length / termsPerPage)
+
     
-    
+// initiate first page on window load
+window.onload = () => {
+    document.querySelector('.page-number').click()
+}
+// initiate first page on window load
+
+// generating 9 cards per page
+    for (let i = 1; i <= roundedTermsNum; i++) {
+        const pageNumber = document.createElement('span')
+        pageNumber.setAttribute('class', 'page-number')
+        pageNumber.innerText = i
+        paginationWrapper.append(pageNumber)
+        pageNumber.addEventListener('click', function () {
+            document.querySelectorAll('.page-number').forEach(el => el.classList.remove('active-page'))
+            this.classList.add('active-page')
+            const pageNum = +this.innerText
+            const startPoint = (pageNum -1) * termsPerPage
+            const endPoint = startPoint + termsPerPage
+            const paginationResult = data.slice(startPoint, endPoint)
+            cardsWrapper.innerHTML = ''
+            renderData(paginationResult)
+        })
+    }
+// generating 9 cards per page
+
+
     alphabetGenerator(alphabetArrGeo)
     lettersOnClick()
     const switchFace = document.querySelector('.switch-face')
@@ -117,41 +347,66 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
         }
 
     })
-    
-    const dataToRender = data.filter(item => item.id < 10)
 
-    renderData(dataToRender)
+    // const dataToRender = data.filter(item => item.id < 10)
+
+    // renderData(dataToRender)
 
     searchFilter.addEventListener('click', () => {
-        const searchFilterData = data.filter(item => item.keyword ==searchFilter.value)
-        if(searchFilter.value !== 'default'){
+        const searchFilterData = data.filter(item => item.keyword == searchFilter.value)
+        searchCounter (searchFilterData)
+        if (searchFilter.value !== 'default') {
             cardsWrapper.innerHTML = ''
             renderData(searchFilterData)
-            console.log(searchFilter.value)
-            console.log(searchFilter)
-            console.log(searchFilterData)
         }
-        
     })
 
     const search = document.querySelector('#dictionary-search')
     search.addEventListener('keyup', (e) => {
         cardsWrapper.innerHTML = ''
         const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
+        searchCounter (filteredData)
         renderData(filteredData)
 
     })
 
+
+
+    function searchCounter (arr) {
+        if(arr !== null) {
+            messageWrapper.style.display = 'block'
+            resultCounter.innerText = arr.length
+        if(resultCounter.innerText == 0){
+            notFoundMessage.style.display = 'flex'
+        }else{
+            notFoundMessage.style.display = 'none'
+        }
+        }
+    }
+
+
     function alphabetGenerator(alphabetArray) {
-        alphabetArray.forEach((letter) => {
-            const letterSpan = document.createElement('span')
-            letterSpan.setAttribute('class', 'letter-box')
-            letterSpan.innerText = letter
-            alphabetWrapper.append(letterSpan)
-            letterSpan.addEventListener('click', (e) => {
-               console.log(e.target);
+        if (alphabetArray[0] == alphabetArrGeo[0]) {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
             })
-        })
+        } else {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter.toUpperCase()
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
+            })
+        }
     }
 
     function lettersOnClick() {

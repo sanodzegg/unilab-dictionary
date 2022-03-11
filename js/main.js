@@ -283,12 +283,12 @@ const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 
 const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 const cardsWrapper = document.querySelector('.term-cards-wrapper')
-if (document.location.pathname == '/unilab-dictionary/index.html') {
+if (document.location.pathname == '/index.html') {
     const dataToRender = data.filter(item => item.id < 3)
-
+    // /unilab-dictionary
     renderData(dataToRender)
 }
-if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
+if (document.location.pathname == '/dictionary.html') {
     const alphabetWrapper = document.querySelector('.alphabet-wrapper')
     const searchFilter = document.querySelector('#filter')
     const resultCounter = document.querySelector('.search-result-counter')
@@ -352,7 +352,7 @@ window.onload = () => {
 
     // renderData(dataToRender)
 
-    searchFilter.addEventListener('click', () => {
+    searchFilter.addEventListener('change', () => {
         const searchFilterData = data.filter(item => item.keyword == searchFilter.value)
         searchCounter (searchFilterData)
         if (searchFilter.value !== 'default') {
@@ -364,10 +364,44 @@ window.onload = () => {
     const search = document.querySelector('#dictionary-search')
     search.addEventListener('keyup', (e) => {
         cardsWrapper.innerHTML = ''
+        paginationWrapper.style.display = 'none';
         const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
         searchCounter (filteredData)
         renderData(filteredData)
-
+        if(e.target.value.length == 0) {
+            cardsWrapper.innerHTML = '';
+            messageWrapper.style.display = 'none';
+            paginationWrapper.style.display = 'block';
+            for(let i = 0; i < paginationWrapper.childNodes.length; i++) {
+                paginationWrapper.childNodes[i].classList.remove('active-page');
+            }
+            paginationWrapper.childNodes[0].classList.add('active-page');
+            for(let i = 0; i < 9; i++) {
+                const card = document.createElement('div')
+                card.setAttribute('class', 'term-card')
+                cardsWrapper.append(card)
+                card.innerHTML = `
+                          <div class="card-header">
+                              <span class="term-icon">
+                                  <img src="${data[i].iconPath}" alt="third icon">
+                              </span>
+                              <h3 class="term-header-title"><span class="bold">${data[i].titleEng} -</span><span>${data[i].titleGeo}</span></h3>
+                          </div>
+                          <div class="card-body">
+                              <p class="term-description">${data[i].Description}</p>
+                          </div>
+                          <div class="card-footer">
+                              <div class="hashtag-keywords">
+                                  <span>#${data[i].hashTags[0]}</span>
+                                  <span>#${data[i].hashTags[1]}</span>
+                              </div>
+                              <div class="button-wrapper">
+                                  <a href="#" class="see-details">ნახე სრულად</a>
+                              </div>
+                          </div>
+            `
+            }
+        }
     })
 
 

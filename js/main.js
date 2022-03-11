@@ -1,603 +1,458 @@
-if(document.location.pathname == '/unilab-dictionary/dictionary.html'){
-    let alphabet = ['ა','ბ','გ','დ','ე','ვ','ზ','თ','ი','კ','ლ','მ','ნ','ო','პ','ჟ','რ','ს','ტ','უ','ფ','ქ','ღ','ყ','შ','ჩ','ც','ძ','წ','ჭ','ხ','ჯ','ჰ'];
-    alphabet.forEach((letter)=> {
-    let child = document.createElement('span');
-    child.setAttribute('class', 'al-letter');
-    child.innerText = letter;
-    document.querySelector('.alphabet-wrapper').appendChild(child)
-})
-let alpbox = document.querySelectorAll('.al-letter');
-for(let i = 0; i < alpbox.length; i++) {
-    alpbox[i].addEventListener('click', function(){
-        for(let e = 0; e < alpbox.length; e++) {
-            alpbox[e].classList.remove('al-active')
-        }
-        for(let a = 0; a < alpbox.length; a++) {
-            if(a == i) {
-                alpbox[a].classList.add('al-active')
-                break;
-            }
-        }
-    })
-}
-let lchange = document.createElement('span');
-lchange.className = 'lchange';
-lchange.innerText = 'ENG'
-document.querySelector('.alphabet-wrapper').appendChild(lchange)
-let parent = document.querySelector('.pagination-parent');
-window.onload = function() {
-    generateTerms(0);
-    if(Object.keys(terms).length > 1) {
-        generatePages();
-        document.querySelector('.page-el').classList.add('page-active')
-    }
-}
+const data = [
+    {
+        id: 0,
+        titleEng: 'Project management',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 1,
+        titleEng: 'Project manager',
+        titleGeo: 'პროექტის მენეჯერი',
+        Description: ' PM, ერთ-ერთი მთავარი მონაწილე პროექტში. მისი როლი არის',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 2,
+        titleEng: 'ICT Project',
+        titleGeo: 'ICT პროექტი',
+        Description: 'ICT იშიფრება, როგორც ინფორმაციული და საკომუნიკაციო როგორც ინფორმაციული და საკომუნიკაციო',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
+    },
+    {
+        id: 3,
+        titleEng: 'Project management 3',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 4,
+        titleEng: 'Project management 4',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 5,
+        titleEng: 'Project management 5',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
+    },
+    {
+        id: 6,
+        titleEng: 'Project management 6',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 7,
+        titleEng: 'Project management 7',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 8,
+        titleEng: 'Project management 8',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'python'
+    },
+    {
+        id: 9,
+        titleEng: 'Project management 9',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 10,
+        titleEng: 'Project management 10',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 11,
+        titleEng: 'Project management 11',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 12,
+        titleEng: 'Project management 12',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 13,
+        titleEng: 'Project management 13',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 14,
+        titleEng: 'Project management 14',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 15,
+        titleEng: 'Project management 15',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 16,
+        titleEng: 'Project management 16',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 17,
+        titleEng: 'Project management 17',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 18,
+        titleEng: 'Project management 18',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 19,
+        titleEng: 'Project management 19',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 20,
+        titleEng: 'Project management 20',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 21,
+        titleEng: 'Project management 21',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 22,
+        titleEng: 'Project management 22',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 23,
+        titleEng: 'Project management 23',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 24,
+        titleEng: 'Project management 24',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 25,
+        titleEng: 'Project management 25',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 26,
+        titleEng: 'Project management 26',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 27,
+        titleEng: 'Project management 27',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'python'],
+        iconPath: 'media/svg/term-cards/term-icon-1.svg',
+        keyword: 'python'
+    },
+    {
+        id: 28,
+        titleEng: 'Project management 28',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'wordpress'],
+        iconPath: 'media/svg/term-cards/term-icon-2.svg',
+        keyword: 'wordpress'
+    },
+    {
+        id: 29,
+        titleEng: 'Project management 29',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+    {
+        id: 30,
+        titleEng: 'Project management 30',
+        titleGeo: 'პროექტის მენეჯმენტი',
+        Description: 'ადამიანური, მატერიალური და დროითი რესურსების დაგეგმვა',
+        hashTags: ['გრაფიკულიდიზაინი', 'frontend'],
+        iconPath: 'media/svg/term-cards/term-icon-3.svg',
+        keyword: 'frontend'
+    },
+]
+const alphabetArrGeo = ['ა', 'ბ', 'გ', 'დ', 'ე', 'ვ', 'ზ', 'თ', 'ი', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ჟ', 'რ', 'ს', 'ტ', 'უ', 'ფ', 'ქ', 'ღ', 'ყ', 'შ', 'ჩ', 'ც', 'ძ', 'წ', 'ჭ', 'ხ', 'ჯ', 'ჰ']
+const alphabetArrEng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-let terms = {
-    0 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    },
-    1 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    },
-    2 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    },
-    3 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მეოთხე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-            }
-        },
-    },
-    4 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მეხუთე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    },
-    5 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მეექვსე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    },
-    6 : {
-        0 : {
-            main : {
-                0 : {
-                    header : 'მეშვიდე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        1 : {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        },
-        2: {
-            main : {
-                0 : {
-                    header : 'პირველი',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['first', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-1.svg'
-                },
-                1 : {
-                    header : 'მეორე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['second', 'mid'],
-                    iconPath: '../media/svg/term-cards/term-icon-2.svg'
-                },
-                2 : {
-                    header : 'მესამე',
-                    body : `ადამიანური, მატერიალური და დროითი რეს...`,
-                    hashtags : ['third', 'graphicdesign'],
-                    iconPath: '../media/svg/term-cards/term-icon-3.svg'
-                }
-            }
-        }
-    }
+const cardsWrapper = document.querySelector('.term-cards-wrapper')
+if (document.location.pathname == '/unilab-dictionary/index.html') {
+    const dataToRender = data.filter(item => item.id < 3)
+
+    renderData(dataToRender)
 }
+if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
+    const alphabetWrapper = document.querySelector('.alphabet-wrapper')
+    const searchFilter = document.querySelector('#filter')
+    const resultCounter = document.querySelector('.search-result-counter')
+    const messageWrapper = document.querySelector('.counter-wrapper')
+    const notFoundMessage = document.querySelector('.not-found-message-wrapper')
+    const paginationWrapper = document.querySelector('.pagination')
+    const termsPerPage = 9
+    const roundedTermsNum = Math.ceil(data.length / termsPerPage)
 
-function generateTerms(val) {
-    for(let i = 0; i < Object.keys(terms[val]).length; i++) {
-        let wrapper = document.createElement('div');
-        wrapper.setAttribute('class', 'term-cards-wrapper');
-        parent.appendChild(wrapper);
-        for(let a = 0; a <= 3; a++) {
-            let main = document.createElement('div');
-            main.setAttribute('class', 'term-card');
-            wrapper.appendChild(main);
-            try {
-                main.innerHTML = 
-                `
-                    <div class="card-header">
-                        <h3 class="term-header-title"><span class="bold">${terms[val][i].main[a].header}</span></h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="term-description">${terms[val][i].main[a].body}</p>
-                    </div>
-                    <div class="card-footer">
-                        <div class="hashtag-keywords">
-                            ${terms[val][i].main[a].hashtags.map(e => {
-                                return `<span>#${e}</span>`
-                            }).join('')}
-                        </div>
-                        <div class="button-wrapper">
-                            <a href="#" class="see-details">ნახე სრულად</a>
-                        </div>
-                    </div>
-                `
-            } catch(err) {
-                for(let i = 0; i < document.querySelectorAll('.term-card').length; i++) {
-                    if(document.querySelectorAll('.term-card')[i].innerHTML == '') {
-                        document.querySelectorAll('.term-card')[i].remove();
-                    }
-                }
-            }
-        }
-    }
+    
+// initiate first page on window load
+window.onload = () => {
+    document.querySelector('.page-number').click()
 }
+// initiate first page on window load
 
-let paginationClicked = 0;
-
-function generatePages() {
-    let pgParent = document.querySelector('.pagination')
-    if(Object.keys(terms).length >= 4) {
-        for(let i = 0; i < 4; i++) {
-            let page = document.createElement('span');
-            page.setAttribute('class', 'page-el');
-            page.innerText = i+1;
-            pgParent.appendChild(page);
-        }
-    } else {
-        for(let i = 0; i < Object.keys(terms).length; i++) {
-            let page = document.createElement('span');
-            page.setAttribute('class', 'page-el');
-            page.innerText = i+1;
-            pgParent.appendChild(page);
-        }
-    }
-    let box = document.querySelectorAll('.page-el');
-    for(let i = 0; i < box.length; i++) {
-        box[i].addEventListener('click', function(){
-            paginationClicked = parseInt(box[i].innerText);
+// generating 9 cards per page
+    for (let i = 1; i <= roundedTermsNum; i++) {
+        const pageNumber = document.createElement('span')
+        pageNumber.setAttribute('class', 'page-number')
+        pageNumber.innerText = i
+        paginationWrapper.append(pageNumber)
+        pageNumber.addEventListener('click', function () {
+            document.querySelectorAll('.page-number').forEach(el => el.classList.remove('active-page'))
+            this.classList.add('active-page')
+            const pageNum = +this.innerText
+            const startPoint = (pageNum -1) * termsPerPage
+            const endPoint = startPoint + termsPerPage
+            const paginationResult = data.slice(startPoint, endPoint)
+            cardsWrapper.innerHTML = ''
+            renderData(paginationResult)
         })
     }
-    for(let i = 0; i < box.length; i++) {
-        box[i].addEventListener('click', function(){
-            paginationClicked = parseInt(box[i].innerText);
-            let parent = document.querySelector('.pagination-parent');
-            parent.innerHTML = '';
-            parent = generateTerms(paginationClicked-1);
-            for(let e = 0; e < box.length; e++) {
-                box[e].classList.remove('page-active')
-            }
-            for(let a = 0; a < box.length; a++) {
-                if(a == i) {
-                    box[a].classList.add('page-active')
-                    break;
-                }
-            }
+// generating 9 cards per page
+
+
+    alphabetGenerator(alphabetArrGeo)
+    lettersOnClick()
+    const switchFace = document.querySelector('.switch-face')
+    const switchTextEng = 'ENG'
+    const switchTextGeo = 'ქარ'
+    switchFace.innerText = switchTextEng
+
+    switchFace.addEventListener('click', () => {
+        if (switchFace.innerText == switchTextEng) {
+            switchFace.innerText = switchTextGeo
+            alphabetWrapper.innerText = ''
+            alphabetGenerator(alphabetArrEng)
+            lettersOnClick()
+        }
+        else {
+            switchFace.innerText = switchTextEng
+            alphabetWrapper.innerText = ''
+            alphabetGenerator(alphabetArrGeo)
+            lettersOnClick()
+        }
+
+    })
+
+    // const dataToRender = data.filter(item => item.id < 10)
+
+    // renderData(dataToRender)
+
+    searchFilter.addEventListener('click', () => {
+        const searchFilterData = data.filter(item => item.keyword == searchFilter.value)
+        searchCounter (searchFilterData)
+        if (searchFilter.value !== 'default') {
+            cardsWrapper.innerHTML = ''
+            renderData(searchFilterData)
+        }
+    })
+
+    const search = document.querySelector('#dictionary-search')
+    search.addEventListener('keyup', (e) => {
+        cardsWrapper.innerHTML = ''
+        const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
+        searchCounter (filteredData)
+        renderData(filteredData)
+
+    })
+
+
+
+    function searchCounter (arr) {
+        if(arr !== null) {
+            messageWrapper.style.display = 'block'
+            resultCounter.innerText = arr.length
+        if(resultCounter.innerText == 0){
+            notFoundMessage.style.display = 'flex'
+        }else{
+            notFoundMessage.style.display = 'none'
+        }
+        }
+    }
+
+
+    function alphabetGenerator(alphabetArray) {
+        if (alphabetArray[0] == alphabetArrGeo[0]) {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
+            })
+        } else {
+            alphabetArray.forEach((letter) => {
+                const letterSpan = document.createElement('span')
+                letterSpan.setAttribute('class', 'letter-box')
+                letterSpan.innerText = letter.toUpperCase()
+                alphabetWrapper.append(letterSpan)
+                letterSpan.addEventListener('click', (e) => {
+                    console.log(e.target);
+                })
+            })
+        }
+    }
+
+    function lettersOnClick() {
+        const letterBoxes = document.querySelectorAll('.letter-box')
+        letterBoxes.forEach(letterBox => {
+            letterBox.addEventListener('click', function () {
+                letterBoxes.forEach(letter => letter.classList.remove('active-letter'))
+                letterBox.classList.add('active-letter')
+            })
         })
     }
-    let ect = document.createElement('span');
-    ect.setAttribute('class', 'dots-wrap');
-    ect.innerText = '...';
-    let arrow = document.createElement('span');
-    arrow.setAttribute('id', 'scrollRight');
-    arrow.innerText = '>';
-    pgParent.append(ect)
-    pgParent.append(arrow)
-    document.querySelector('.dots-wrap').addEventListener('click', function(){
-        pgParent.innerHTML = '';
-        for(let i = 0; i < Object.keys(terms).length; i++) {
-            let page = document.createElement('span');
-            page.setAttribute('class', 'page-el');
-            page.innerText = i+1;
-            pgParent.appendChild(page);
-        }
-        let box = document.querySelectorAll('.page-el');
-        try {
-            box[paginationClicked-1].classList.add('page-active');
-        } catch(err) {
-            box[0].classList.add('page-active');
-        }
-        for(let i = 0; i < box.length; i++) {
-            box[i].addEventListener('click', function(){
-                paginationClicked = parseInt(box[i].innerText);
-            })
-        }
-        paginationClicked = paginationClicked + 1;
-        for(let i = 0; i < box.length; i++) {
-            box[i].addEventListener('click', function(){
-                paginationClicked = parseInt(box[i].innerText);
-                let parent = document.querySelector('.pagination-parent');
-                parent.innerHTML = '';
-                parent = generateTerms(paginationClicked-1);
-                for(let e = 0; e < box.length; e++) {
-                    box[e].classList.remove('page-active')
-                }
-                for(let a = 0; a < box.length; a++) {
-                    if(a == i) {
-                        box[a].classList.add('page-active')
-                        break;
-                    }
-                }
-            })
-        }
+
+}
+
+
+
+
+
+
+
+
+
+function renderData(array) {
+    array.forEach((element) => {
+        const card = document.createElement('div')
+        card.setAttribute('class', 'term-card')
+        cardsWrapper.append(card)
+        card.innerHTML = `
+                  <div class="card-header">
+                      <span class="term-icon">
+                          <img src="${element.iconPath}" alt="third icon">
+                      </span>
+                      <h3 class="term-header-title"><span class="bold">${element.titleEng} -</span><span>${element.titleGeo}</span></h3>
+                  </div>
+                  <div class="card-body">
+                      <p class="term-description">${element.Description}</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="hashtag-keywords">
+                          <span>#${element.hashTags[0]}</span>
+                          <span>#${element.hashTags[1]}</span>
+                      </div>
+                      <div class="button-wrapper">
+                          <a href="#" class="see-details">ნახე სრულად</a>
+                      </div>
+                  </div>
+    `
     })
-    paginationClicked = paginationClicked + 1;
-    document.getElementById('scrollRight').addEventListener('click', function(){
-        paginationClicked++;
-        if(paginationClicked <= 4) {
-            for(let i = 0; i < box.length; i++) {
-                box[i].classList.remove('page-active')
-            }
-            box[paginationClicked-1].classList.add('page-active');
-            parent.innerHTML = '';
-            generateTerms(paginationClicked-1)
-        } else {
-            paginationClicked = 4;
-        }
-    })
-    document.getElementById('scrollLeft').addEventListener('click', function(){
-        paginationClicked--;
-        if(paginationClicked >= 1) {
-            for(let i = 0; i < box.length; i++) {
-                box[i].classList.remove('page-active')
-            }
-            box[paginationClicked-1].classList.add('page-active');
-            parent.innerHTML = '';
-            generateTerms(paginationClicked-1)
-        } else {
-            paginationClicked = 1;
-        }
-    })
-  }
 }

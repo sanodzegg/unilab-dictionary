@@ -297,32 +297,35 @@ if (document.location.pathname == '/unilab-dictionary/dictionary.html') {
     const paginationWrapper = document.querySelector('.pagination')
     const termsPerPage = 9
     const roundedTermsNum = Math.ceil(data.length / termsPerPage)
+    let paginationResult
 
-    
-// initiate first page on window load
-window.onload = () => {
-    document.querySelector('.page-number').click()
-}
-// initiate first page on window load
-
-// generating 9 cards per page
-    for (let i = 1; i <= roundedTermsNum; i++) {
-        const pageNumber = document.createElement('span')
-        pageNumber.setAttribute('class', 'page-number')
-        pageNumber.innerText = i
-        paginationWrapper.append(pageNumber)
-        pageNumber.addEventListener('click', function () {
-            document.querySelectorAll('.page-number').forEach(el => el.classList.remove('active-page'))
-            this.classList.add('active-page')
-            const pageNum = +this.innerText
-            const startPoint = (pageNum -1) * termsPerPage
-            const endPoint = startPoint + termsPerPage
-            const paginationResult = data.slice(startPoint, endPoint)
-            cardsWrapper.innerHTML = ''
-            renderData(paginationResult)
-        })
+    // initiate first page on window load
+    window.onload = () => {
+        document.querySelector('.page-number').click()
     }
-// generating 9 cards per page
+    // initiate first page on window load
+
+    // generating 9 cards per page
+    paginationRender(data)
+    function paginationRender (arr) {
+        for (let i = 1; i <= roundedTermsNum; i++) {
+            const pageNumber = document.createElement('span')
+            pageNumber.setAttribute('class', 'page-number')
+            pageNumber.innerText = i
+            paginationWrapper.append(pageNumber)
+            pageNumber.addEventListener('click', function () {
+                document.querySelectorAll('.page-number').forEach(el => el.classList.remove('active-page'))
+                this.classList.add('active-page')
+                const pageNum = +this.innerText
+                const startPoint = (pageNum - 1) * termsPerPage
+                const endPoint = startPoint + termsPerPage
+                paginationResult = arr.slice(startPoint, endPoint)
+                cardsWrapper.innerHTML = ''
+                renderData(paginationResult)
+            })
+        }
+    }
+    // generating 9 cards per page
 
 
     alphabetGenerator(alphabetArrGeo)
@@ -348,13 +351,10 @@ window.onload = () => {
 
     })
 
-    // const dataToRender = data.filter(item => item.id < 10)
-
-    // renderData(dataToRender)
 
     searchFilter.addEventListener('click', () => {
         const searchFilterData = data.filter(item => item.keyword == searchFilter.value)
-        searchCounter (searchFilterData)
+        searchCounter(searchFilterData)
         if (searchFilter.value !== 'default') {
             cardsWrapper.innerHTML = ''
             renderData(searchFilterData)
@@ -362,25 +362,39 @@ window.onload = () => {
     })
 
     const search = document.querySelector('#dictionary-search')
-    search.addEventListener('keyup', (e) => {
+    search.addEventListener('input', (e) => {
         cardsWrapper.innerHTML = ''
         const filteredData = data.filter(item => item.titleEng.includes(e.target.value) || item.titleGeo.includes(e.target.value))
-        searchCounter (filteredData)
-        renderData(filteredData)
+        if(filteredData.length < 10 && filteredData.length !== 0) {
+            searchCounter(filteredData)
+            renderData(filteredData)
+            paginationWrapper.style.display = 'none'
+        }else if (filteredData.length == 0){
+            notFoundMessage.style.display = 'flex'
+            paginationWrapper.style.display = 'none'
+            searchCounter(filteredData)
+        }
+        if (e.target.value == '') {
+            renderData(paginationResult)
+            notFoundMessage.style.display = 'none'
+            paginationWrapper.style.display = 'block'
+            messageWrapper.style.display = 'none'
+            // searchCounter(data)
 
+        }else if (e.target.value !== '' && filteredData.length >= 10){
+            console.log(filteredData.length)
+            searchCounter(filteredData)
+            renderData(filteredData)
+            paginationWrapper.style.display = 'none'
+        }
     })
 
 
 
-    function searchCounter (arr) {
-        if(arr !== null) {
+    function searchCounter(arr) {
+        if (arr !== null) {
             messageWrapper.style.display = 'block'
             resultCounter.innerText = arr.length
-        if(resultCounter.innerText == 0){
-            notFoundMessage.style.display = 'flex'
-        }else{
-            notFoundMessage.style.display = 'none'
-        }
         }
     }
 
